@@ -1,8 +1,20 @@
-{{#each albums}}
-    <a href="/album/{{ this.id }}" style="display: block; padding: 5px;">
-        <img src="{{ this.image }}" width="100" />
-        {{this.name}}
+<div class="container">
+    <div class="row">
 
-        <span class="btn btn-primary">View Tracks</span>
-    </a>
-{{/each}}
+        {{#each albums}}
+            <div class="col col-6 col-sm-4">
+                <a href="/album/{{ this.id }}">
+                    <div class="card">
+                        <img src="{{ this.image }}" class="card-img-top" />
+                        <div class="card-body text-center">
+                            <h5 class="card-title">{{this.name}}</h5>
+                            <span class="btn btn-primary">View Tracks</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        {{/each}}
+
+    </div>
+
+</div>
