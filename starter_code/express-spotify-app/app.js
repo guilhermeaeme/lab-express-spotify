@@ -3,6 +3,7 @@ const path = require('path')
 const app = express();
 const hbs = require('hbs');
 const bodyParser = require('body-parser');
+const morgan = require('morgan');
 
 const SpotifyWebApi = require('spotify-web-api-node');
 
@@ -27,6 +28,8 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 app.use(express.static(path.join(__dirname, 'public')));
 hbs.registerPartials(__dirname + '/views/partials');
+
+app.use(morgan('combined'));
 
 app.get('/', function (req, res) {
     res.render('index');

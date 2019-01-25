@@ -11,6 +11,14 @@
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+      <div class="container">
+        <form action="/artists" class="form-inline my-12">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="q">
+          <button class="btn btn-success my-2 my-sm-0" type="submit">Search for an artist</button>
+        </form>
+      </div>
+    </nav>
     <main>
         {{{ body }}}
     </main>
